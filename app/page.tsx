@@ -1,6 +1,6 @@
 "use client";
 
-import Section from "./components/Section";
+import Section from "./components/Section/Section";
 import SideBar from "./components/SideBar/SideBar";
 import { useState } from "react";
 
@@ -14,7 +14,7 @@ export default function Home() {
         <div className={`w-${isMinimized ? "20" : "1/4"} h-full`}>
           <SideBar isMinimized={isMinimized} setIsMinimized={setIsMinimized} />
         </div>
-        <div className={`w-${isMinimized ? "full" : "3/4"}`}>
+        <div className={`w-${isMinimized ? "full" : "full"}`}>
           <Section isMinimized={isMinimized} />
         </div>
       </div>
