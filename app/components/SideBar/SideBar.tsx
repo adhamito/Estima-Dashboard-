@@ -8,8 +8,6 @@ interface SideBarProps {
   setIsMinimized: React.Dispatch<React.SetStateAction<boolean>>;
 }
 
-
-
 const SideBar: React.FC<SideBarProps> = ({ isMinimized, setIsMinimized }) => {
   const toggleSidebar = () => {
     setIsMinimized(!isMinimized);
@@ -30,7 +28,11 @@ const SideBar: React.FC<SideBarProps> = ({ isMinimized, setIsMinimized }) => {
           Estima
         </h1>
       </div>
-      <ul className={`mt-12 w-full items-start ml-3 ${isMinimized ? "text-center" : ""}`}>
+      <ul
+        className={`mt-12 w-full items-start ml-3 ${
+          isMinimized ? "text-center" : ""
+        }`}
+      >
         {Constants.map((item, index) => (
           <Item key={index} item={item} isMinimized={isMinimized} />
         ))}

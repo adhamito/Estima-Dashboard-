@@ -1,9 +1,9 @@
 import React from "react";
 type Props = {
-    isMinimized: boolean;
-    };
+  isMinimized?: boolean;
+};
 
-const Section:React.FC<Props> = ({ isMinimized }) => {
+const Section: React.FC<Props> = () => {
   return (
     <div className="bg-[#f8f5f0] min-h-screen py-16 px-14 rounded-e-2xl ml-1">
       <div>
