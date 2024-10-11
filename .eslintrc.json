@@ -1,3 +1,9 @@
 {
-  "extends": ["next/core-web-vitals", "next/typescript"]
+  "extends": ["next/core-web-vitals", "next/typescript"],
+  "rules": {
+    "no-console": "warn",
+    "@typescript-eslint/no-unsed-vars": ["error"],
+    "import/no-unresolved": "error",
+    "import/named": "error"
+  }
 }
