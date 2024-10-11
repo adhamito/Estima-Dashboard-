@@ -10,7 +10,10 @@ export default function Home() {
 
   return (
     <div className="h-full w-full">
-      <div className="flex sm-container md-container flex-col md:flex-row sm:flex-col justify-between items-start w-full">
+      <div
+        className="flex sm-container md-container flex-col
+       md:flex-row sm:flex-col justify-between items-start w-full"
+      >
         <div className={`w-${isMinimized ? "20" : "1/4"} h-full`}>
           <SideBar isMinimized={isMinimized} setIsMinimized={setIsMinimized} />
         </div>
