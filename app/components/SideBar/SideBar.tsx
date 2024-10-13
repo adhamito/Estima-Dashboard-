@@ -15,13 +15,13 @@ const SideBar: React.FC<SideBarProps> = ({ isMinimized, setIsMinimized }) => {
 
   return (
     <aside
-      className={`bg-[#201f24] min-h-screen py-16 px-4 rounded-e-2xl transition-all duration-300 ${
-        isMinimized ? "w-20" : "w-full"
+      className={`bg-[#201f24] py-28 px-4 h-full  rounded-e-2xl transition-all duration-300 ${
+        isMinimized ? "w-20" : "w-64"
       }`}
     >
       <div>
         <h1
-          className={`text-white font-bold text-2xl ml-16 ${
+          className={`text-white font-bold text-2xl ml-6 ${
             isMinimized ? "hidden" : "block"
           }`}
         >
@@ -29,24 +29,26 @@ const SideBar: React.FC<SideBarProps> = ({ isMinimized, setIsMinimized }) => {
         </h1>
       </div>
       <ul
-        className={`mt-12 w-full items-start ml-3 ${
+        className={`mt-12 w-full items-start ${
           isMinimized ? "text-center" : ""
         }`}
       >
         {Constants.map((item, index) => (
           <Item key={index} item={item} isMinimized={isMinimized} />
         ))}
-        <p
-          className="mt-28 flex items-center text-[#717075] cursor-pointer"
-          onClick={toggleSidebar}
-        >
-          <TbArrowBigLeftLines
-            size={30}
-            className={`mr-4 ${isMinimized ? "rotate-180" : ""}`}
-          />
-          {!isMinimized && "minimize menu"}
-        </p>
       </ul>
+      <footer
+        className=" flex items-center justify-center text-[#717075] cursor-pointer mt-96"
+        onClick={toggleSidebar}
+      >
+        <TbArrowBigLeftLines
+          size={30}
+          className={`transition-transform duration-300 ${
+            isMinimized ? "rotate-180" : ""
+          }`}
+        />
+        {!isMinimized && <span className="ml-2">minimize menu</span>}
+      </footer>
     </aside>
   );
 };
