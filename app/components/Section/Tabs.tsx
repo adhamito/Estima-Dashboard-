@@ -1,39 +1,40 @@
 import React from "react";
-import { Tabs as UITabs, TabsList, TabsTrigger, TabsContent } from "../ui/tabs";
+import Image from "next/image";
+import { Tabs as UITabs, TabsList, TabsContent } from "../ui/tabs";
 
 const TransactionsTabs = () => {
   const transactions = [
     {
       name: "Emma Richardson",
-      imageUrl: "https://via.placeholder.com/40", // Replace with actual image
+      imageUrl: "https://via.placeholder.com/40",
       amount: "+$75.50",
       date: "19 Aug 2024",
       type: "credit",
     },
     {
       name: "Savory Bites Bistro",
-      imageUrl: "https://via.placeholder.com/40", // Replace with actual image
+      imageUrl: "https://via.placeholder.com/40",
       amount: "-$55.50",
       date: "19 Aug 2024",
       type: "debit",
     },
     {
       name: "Daniel Carter",
-      imageUrl: "https://via.placeholder.com/40", // Replace with actual image
+      imageUrl: "https://via.placeholder.com/40",
       amount: "-$42.30",
       date: "18 Aug 2024",
       type: "debit",
     },
     {
       name: "Sun Park",
-      imageUrl: "https://via.placeholder.com/40", // Replace with actual image
+      imageUrl: "https://via.placeholder.com/40",
       amount: "+$120.00",
       date: "17 Aug 2024",
       type: "credit",
     },
     {
       name: "Urban Services Hub",
-      imageUrl: "https://via.placeholder.com/40", // Replace with actual image
+      imageUrl: "https://via.placeholder.com/40",
       amount: "-$65.00",
       date: "17 Aug 2024",
       type: "debit",
@@ -62,7 +63,7 @@ const TransactionsTabs = () => {
               className="flex items-center justify-between p-4 bg-gray-50 rounded-lg"
             >
               <div className="flex items-center space-x-4">
-                <img
+                <Image
                   className="w-10 h-10 rounded-full"
                   src={transaction.imageUrl}
                   alt={transaction.name}
