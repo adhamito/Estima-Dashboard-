@@ -3,7 +3,7 @@ import { Card, CardContent, CardHeader, CardTitle } from "../ui/card";
 
 const Header = () => {
   return (
-    <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3 rounded-full ">
+    <div className="grid gap-1 md:grid-cols-2 lg:grid-cols-3 rounded-full mb-4 ">
       <Card className="hover:bg-black hover:text-white m-3">
         <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
           <CardTitle className="text-sm font-medium">Current Balance</CardTitle>
