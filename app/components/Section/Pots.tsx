@@ -13,8 +13,8 @@ const Pots = () => {
   const totalSaved = potsData.reduce((total, pot) => total + pot.amount, 0);
 
   return (
-    <div className="bg-[#ffffff] shadow-md rounded-lg p-6 w-full max-w-4xl">
-      <div className="flex justify-between items-center mb-4">
+    <div className="bg-[#ffffff] shadow-md rounded-lg w-full ">
+      <div className="flex justify-between items-center m-4">
         <h2 className="text-lg font-bold text-[#4c4c4c]">Pots</h2>
         <Link href="/*" className="text-[#8d8d8d]">
           See Details &gt;
